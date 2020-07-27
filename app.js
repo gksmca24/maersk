@@ -6,7 +6,7 @@ function createArr() {
         let arrTemplate = `<div class="shufflebox box__${i + 1}">${i + 1}</div>`
         arr.push(arrTemplate);
     }
-    
+    let gridWrapper = document.getElementById('gridWrapper');
     gridWrapper.innerHTML = arr.join('');
 }
 
@@ -20,3 +20,7 @@ const shuffleArry = () => {
     let gridWrapper = document.getElementById('gridWrapper');
     gridWrapper.innerHTML = arr.join('');
 }
+
+let shuffleCard = document.getElementById('shuffleCard');
+shuffleCard.addEventListener('click', shuffleArry)
+document.getElementById("sortCard").onclick = createArr;
